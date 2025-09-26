@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text"> Hey, i am a dolphin move me around with your  ←, ↑ or →, !</div>
+    <img id ="image" src="dolphin-removebg-preview.png">
+    <div class ="text"> In case you did not look out of the window. Today´s weather:</div>
+ <div id="weather"></div>
+ <div class="carousel-title"></div>
+ <!--Image Slider -->
+<div class="carousel-container">
+  <div class="carousel-slide">
+    <img src="images/mines.weeper 1.png" id="lastClone" alt="#">
+    <!-- real images -->
+    <img src="images/paint1 1.png" alt="#">
+    <img src="images/solitaire 1.png" alt="#">
+    <img src="images/screen 1.png" alt="#">
+    <img src="images/mines.weeper 1.png" alt="#">
+    
+    <!-- clone of the FIRST real image goes last -->
+    <img src="images/paint1 1.png" id="firstClone" alt="#">
+  </div>
+</div>
+<div class="button-area">
+ <button id ="prevBtn">Prev</button>
+  <button id ="nextBtn">Next</button>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<!-- SplitText plugin (only works with GSAP Club files OR from the CDN if public) -->
+<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
