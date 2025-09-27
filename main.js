@@ -97,3 +97,51 @@ carouselSlide.addEventListener("transitionend", () => {
 
 
 ///I will try to make an image that is created and prints a lot of times and then  when you press OK, it dissapears. 
+window.addEventListener("load", () => {
+  const popupArea = document.querySelector("#popup-area");
+
+  for (let i = 0; i < 3; i++) { // how many popups
+    const win = document.createElement("div");
+    win.className = "popup";
+    win.style.left = Math.random() * (window.innerWidth - 110) + "px";
+    win.style.top = Math.random() * (window.innerHeight - 120) + "px";
+     win.style.top = Math.random() * (window.innerHeight - 130) + "px";
+      win.style.top = Math.random() * (window.innerHeight - 140) + "px";
+       win.style.top = Math.random() * (window.innerHeight - 150) + "px";
+        win.style.top = Math.random() * (window.innerHeight - 160) + "px";
+    win.innerHTML = `
+      <div class="popup-header">
+        Warning
+        <button class="popup-close">X</button>
+      </div>
+      <div class="popup-body">
+        Random button to annoy you<br>
+        <button class="button-close">OK</button>
+        <button class="button-close">OK</button>
+      </div>`;
+
+    // add close event for the X button
+    win.querySelector(".popup-close").addEventListener("click", () => {
+      win.remove(popup);
+    });
+      win.querySelector(".button-close").addEventListener("click", () => {
+      win.remove();
+    });
+       win.querySelector(".button-close").addEventListener("click", () => {
+      win.remove();
+    });
+    popupArea.appendChild(win);
+  }
+});
+let map;
+
+async function initMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
+}
+
+initMap();
